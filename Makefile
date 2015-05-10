@@ -4,7 +4,8 @@ CXXFLAGS := -Wall -g --std=c++11
 all: fast-test correct-test
 
 fast-test: fast.out
-	./$<
+	./$< test.dimacs
+	./$< bigger.dimacs
 
 correct-test: correct.out
 	./$<
