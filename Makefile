@@ -10,4 +10,6 @@ correct-test: correct.out
 	./$<
 
 fast.out: fast.cpp prettyprint.hpp
-correct.out: fast.cpp prettyprint.hpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+correct.out: correct.cpp prettyprint.hpp
+	$(CXX) $(CXXFLAGS) $< -o $@
