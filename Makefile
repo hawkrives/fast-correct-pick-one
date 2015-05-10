@@ -9,7 +9,7 @@ fast-test: fast.out
 correct-test: correct.out
 	./$<
 
-fast.out: fast.cpp prettyprint.hpp
+fast.out: fast.cpp prettyprint.hpp dimacs.hpp
 	$(CXX) $(CXXFLAGS) $< -o $@
-correct.out: correct.cpp prettyprint.hpp
+correct.out: correct.cpp prettyprint.hpp dimacs.hpp
 	$(CXX) $(CXXFLAGS) $< -o $@
