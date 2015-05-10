@@ -1,5 +1,7 @@
 # fast-correct-pick-one
 
+St. Olaf College CS 253: Algorithms and Data Structures, HW34: NP 3
+
 This project consists of two phases:
 
 1. Design and implement an algorithm for vertex cover that is fast (but not necessarily correct). That is, first find a way to get an initial rough guess, and then find a way to improve the solution repeatedly.
