@@ -1,0 +1,15 @@
+p edge 0 0
+
+e a b
+e b c
+e c d
+e d e
+e e f
+e f g
+e g h
+e h a
+
+e f a
+e e b
+e h c
+e g d
