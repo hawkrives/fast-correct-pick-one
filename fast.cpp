@@ -39,8 +39,6 @@ using std::pair;
 // to generate: repeatedly pick edges that are disjoint from the ones chosen
 // already, until this is no longer possible.
 
-
-
 vector<string> vertex_cover(const graph g) {
 	vector<connection> list;
 	copy(g.begin(), g.end(), back_inserter(list));
@@ -49,33 +47,25 @@ vector<string> vertex_cover(const graph g) {
 		return a.second.size() > b.second.size();
 	});
 
-	// cout << list << endl;
-
 	vector<string> cover;
 	while (list.size()) {
 		connection max = list.at(0);
 		cover.push_back(max.first);
 
 		list.erase(list.begin());
-		// cout << "here " << list << endl;
 
 		for (string conc : max.second) {
-			// cout << "here 2 " << list << " " << conc << endl;
 			if (!list.size())
 				break;
 
 			auto to_remove = find_if(list.begin(), list.end(), [conc](connection c) {
-				// cout << conc << " " << c.first << endl;
 				return c.first == conc;
 			});
 
 			if (to_remove != list.end()) {
 				list.erase(to_remove);
 			}
-			// cout << "here 3 " << list << endl;
 		}
-
-		// cout << list << endl;
 	}
 
 	return cover;
